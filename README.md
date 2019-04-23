@@ -1,23 +1,25 @@
-# Git: Working with Remote Branches
+# Working with Remote Branches
 
 ## Learning Goals
 
-- Demonstrate getting updates from remote
-- Demonstrate merging branches
-- Demonstrate deleting branches
-- Demonstrate updating remotes and merging changes in one step
+- Get branch updates from remote
+- Merge branches
+- Delete branches
+- Fetch and update the local branch in one step
 
 ## Introduction
 
-Remember we mentioned going into the wilderness &mdash; no Wi-Fi, no Instagram,
-etc.? Getting updates to branches come into play when there are branches that
-live on a remote repository. 
+We've seen how to handle local branches. What about remote branches? They have
+their own special commands and workflows. Let's take a look at how to fetch
+updates and merge branches, and for good measure, we'll also see how to delete
+branches we no longer need.
 
-## Demonstrate Getting Updates From Remote
+## Get Branch Updates from Remote
 
-If you wanted to cache all the information about all the branches on all
-your remotes, you need to use `git fetch` to update the cache for each remote
-name.
+When working with a repository that has remote branches, you'll want to make
+sure that you have access to all the new changes in the repo. If you wanted to
+cache all the information about all the branches on all your remotes, you need
+to use `git fetch` to update the cache for each remote name.
 
 Let's suppose a colleague has created a new branch and pushed it to a location
 that you _both_ use as your `origin` remote. To freshen your local repository
@@ -29,7 +31,6 @@ $ git fetch
 
 Git, yet again, assumes you mean `origin`, but if you had multiple remotes, you
 might provide a name like `my-startup`.
-
 
 ```bash
 $ git fetch my-startup
@@ -52,9 +53,9 @@ Here, the `git fetch` command is being used.
 
 !["git fetch"](https://curriculum-content.s3.amazonaws.com/prework/git-workflow/git%20fetch.gif)
 
-## Demonstrate Merging Branches
+## Merge Branches
 
-Merging allows us to take branches and integrate their content into another
+_Merging_ allows us to take branches and integrate their content into another
 branch. From Git's point of view, it doesn't care whether the branch is local
 or remote or remote-tracking. It finds the difference between the branch you're
 on and the branch you're merging in and weaves them in together.
@@ -83,7 +84,7 @@ Now all the changes that were made on the branch `new-branch-name` are
 integrated into `master`. With work on this branch completed and merged, we no
 longer need it. Any additional work moving forward can be done on a new branch.
 
-## Demonstrate Deleting Branches
+## Delete Branches
 
 Since we've merged our changes into master, we can safely delete our local version
 of `new-branch-name`. A branch can be deleted by providing the `-d`/`–D` options
@@ -115,7 +116,7 @@ likely origin)> --delete <branch-name>`. To list all remaining remotes, again,
 we can type `git branch -a`. It should no longer exist in the list of remote
 branches.
 
-## Demonstrate Fetching and Updating the Local Branch
+## Fetch and Update the Local Branch in One Step
 
 You might think that fetching (to update the cache) and then merging (to pull
 the changes into the local tracking branch you're on) is an unnecessarily two-step long process.
@@ -147,7 +148,7 @@ $ git pull
 ## Conclusion
 
 Retrieving branches from remote repositories allows us to pick up where we left
-off, or add onto someone's work. Some developers will be fixing bugs, others
+off or add onto someone's work. Some developers will be fixing bugs, others
 will be implementing new features, etc. Branch-based development allows us to
 stay organized and work more freely and collaboratively.
 
