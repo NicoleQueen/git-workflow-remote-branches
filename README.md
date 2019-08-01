@@ -63,6 +63,8 @@ on and the branch you're merging in and weaves them in together.
 We can use `git merge other-branch-name` to integrate the changes from one
 branch to the branch to the branch we are currently on. Here are some examples
 
+![Illustration of merging branches](https://curriculum-content.s3.amazonaws.com/git-workflow/Image_5_Merging%20Branches.png)
+
 Assuming we're on `master`:
 
 ```bash
@@ -79,6 +81,8 @@ safe to integrate, we do so by using these commands:
 git checkout master # This switches us back to the master branch
 git merge new-branch-name # This integrates our new branch, new-branch-name, and its changes into master
 ```
+
+![Illustration of merging branches fast foward](https://curriculum-content.s3.amazonaws.com/git-workflow/Image_5B_FFMerge.png)
 
 Now all the changes that were made on the branch `new-branch-name` are
 integrated into `master`. With work on this branch completed and merged, we no
