@@ -61,7 +61,7 @@ or remote or remote-tracking. It finds the difference between the branch you're
 on and the branch you're merging in and weaves them in together.
 
 We can use `git merge other-branch-name` to integrate the changes from one
-branch to the branch to the branch we are currently on. Here are some examples
+branch to the branch we are currently on. Here are some examples
 
 ![Illustration of merging branches](https://curriculum-content.s3.amazonaws.com/git-workflow/Image_5_Merging%20Branches.png)
 
